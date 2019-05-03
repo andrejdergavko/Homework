@@ -1,0 +1,59 @@
+body{
+	margin: 0;
+	background-color: #f6f6f6;
+}
+a {
+	text-decoration-line: none;
+}
+a[href="predatory.html"],
+a[href="mammals.html"],
+a[href="index.html"] {
+	color: red;
+}
+h1, h2 {
+	margin: 10px 0px 0px 0px;
+	font-family: serif;
+}
+.wrapper {
+	width: 1140px;
+	margin: 10px auto;
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #a7d7f9;
+	font-family: sans-serif;
+}
+.contents {
+	width: 230px;
+	padding: 10px;
+	border: 1px solid #696969;
+	background-color: #f6f6f6;
+	font-size: 13px;
+}
+.contents p {
+	text-align: center;
+}
+.contents ol {
+	padding-left: 20px;
+	list-style: none;
+	counter-reset: li;
+}
+.contents li:before {
+	counter-increment: li;
+	content: counters(li,".")" ";
+}
+figure {
+	display: inline-block;
+	width: 400px;
+	padding: 5px;
+	margin: 10px;
+	text-align: center;
+	word-wrap: break-word;
+	border: 1px solid #696969;
+	background-color: #f6f6f6;
+}
+figure.left {
+	float: left;
+}
+figure.right {
+	float: right;
+}
