@@ -1,0 +1,75 @@
+* {
+	font-family: Verdana, sans-serif;
+	line-height: 1.3em;
+}
+
+body{
+	margin: 20px;
+}
+
+.header {
+	width: 40%;
+	border: 1px solid #78c0e0;
+	border-radius: 10px;
+}
+
+.nav__link {
+	text-decoration: none;
+}
+
+.main {
+	margin: 0 20px;
+}
+.main__hello-text {
+	font-weight: 700;
+}
+
+.main__welcome-text {
+	color: #150578;
+	text-shadow: 2px 2px 2px #777;
+}
+
+.main__welcome-img {
+	width: 470px;
+}
+
+.article {
+	margin-left: 200px;
+	padding: 0 10px;
+	width: 700px;
+	border: 1px solid;
+	text-align: justify;
+	text-indent: 40px;
+	letter-spacing: 2px;
+
+}
+
+.article__title {
+	color: #3943b7;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 100;
+}
+
+.article__link {
+	text-decoration: none;
+}
+
+.article__title,
+.article__content,
+.article__link {
+	font-family: Segoe UI;
+	line-height: 1.7em;
+} 
+
+.footer__subscription-box {
+	border: 1px dashed #3943b7;
+	padding: 0 15px;
+	border-radius: 10px;
+	text-align: right;
+}
+
+.footer__info {
+	font-size: 0.8em;
+	font-style: italic;
+}
