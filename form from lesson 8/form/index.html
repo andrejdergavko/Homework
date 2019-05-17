@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Бронирование отеля</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+</head>
+<body>
+	<form action="" class="form">
+		<h1 class="form__title">Бронирование отеля</h1>
+
+		<label class="form__label" for="surname">Фамилия</label>
+		<input class="form__input" type="text" name="surname" required="true">
+
+		<label class="form__label" for="name">Имя</label>
+		<input class="form__input" type="text" name="name" required="true">
+
+		<label class="form__label" for="patronymic">Отчество</label>
+		<input class="form__input" type="text" name="patronymic">
+
+		<label class="form__label" for="arrival-date">Дата заезда</label>
+		<input class="form__input" type="date" name="arrival-date" min="2019-01-01" max="2019-30-12" required="true">
+
+		<label class="form__label" for="leaving-date">Дата отъезда</label>
+		<input class="form__input" type="date" name="leaving-date" required="true">
+
+		<label class="form__label" for="adults">Взрослых</label>
+		<select class="form__input" name="adults" required="true">
+			<option>1 взрослых</option>
+			<option>2 взрослых</option>
+			<option>3 взрослых</option>
+			<option>4 взрослых</option>
+			<option>5 взрослых</option>
+		</select>
+
+		<label class="form__label" for=" babies">Детей до 4 лет</label>
+		<select class="form__input" name="babies" required="true">
+			<option>без детей</option>
+			<option>1 ребенок</option>
+			<option>2 ребенка</option>
+			<option>3 ребенка</option>
+			<option>4 ребенка</option>
+		</select>
+
+		<label class="form__label" for="smoke-room">Номер для курящих</label>
+		<input class="form__input form__input_smoke-room" type="radio" name="smoke-room">
+
+		<label class="form__label" for="phone">Номер телефона</label>
+		<input class="form__input" type="tel" name="phone" required="true">
+
+		<label class="form__label" for="email">Электронный адрес</label>
+		<input class="form__input" type="email" name="email">
+
+		<label class="form__label form__label_textarea" for="coments">Коментарии и дополнения</label>
+		<textarea class="form__input form__input_textarea" name="coments"></textarea>
+
+		<button class="form__button" type="reset" name="reset">Сбросить</button>
+
+		<button class="form__button" type="submit" name="submit">Отправить</button>
+	</form>
+</body>
+</html>
