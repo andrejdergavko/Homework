@@ -1,10 +1,10 @@
-* {
-	font-family: Verdana, sans-serif;
+html {
+	font-family: Verdena, sans-serif;
 	line-height: 1.3em;
 }
 
-body{
-	margin: 20px;
+.wrapper{
+	margin: 15px;
 }
 
 .header {
@@ -18,8 +18,9 @@ body{
 }
 
 .main {
-	margin: 0 20px;
+	margin: 45px 20px;
 }
+
 .main__hello-text {
 	font-weight: 700;
 }
@@ -41,6 +42,8 @@ body{
 	text-align: justify;
 	text-indent: 40px;
 	letter-spacing: 2px;
+	font-family: Segoe UI;
+	line-height: 1.7em;
 
 }
 
@@ -49,24 +52,22 @@ body{
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: 100;
+	
 }
 
 .article__link {
 	text-decoration: none;
 }
 
-.article__title,
-.article__content,
-.article__link {
-	font-family: Segoe UI;
-	line-height: 1.7em;
-} 
-
 .footer__subscription-box {
 	border: 1px dashed #3943b7;
 	padding: 0 15px;
 	border-radius: 10px;
 	text-align: right;
+}
+
+.footer__text {
+	line-height: 0.3em;
 }
 
 .footer__info {
