@@ -1,6 +1,8 @@
 html {
 	font-family: Verdena, sans-serif;
 	line-height: 1.3em;
+	background-image: url(pictures/background.jpg);
+	background-size: cover;
 }
 
 .wrapper{
@@ -11,6 +13,11 @@ html {
 	width: 40%;
 	border: 1px solid #78c0e0;
 	border-radius: 10px;
+	background-color: #fff;
+	background-image: url(pictures/flower.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: right;
 }
 
 .nav__link {
@@ -18,7 +25,10 @@ html {
 }
 
 .main {
-	margin: 45px 20px;
+	display: inline-block;
+	margin: 45px 20px 0;
+	background-color: rgba(0,130,255,0.2);
+	background-clip: border-box;
 }
 
 .main__hello-text {
@@ -35,7 +45,7 @@ html {
 }
 
 .article {
-	margin-left: 200px;
+	margin: 0 150px 45px 150px;
 	padding: 0 10px;
 	width: 700px;
 	border: 1px solid;
@@ -44,7 +54,7 @@ html {
 	letter-spacing: 2px;
 	font-family: Segoe UI;
 	line-height: 1.7em;
-
+	background-color: #fff;
 }
 
 .article__title {
@@ -64,6 +74,7 @@ html {
 	padding: 0 15px;
 	border-radius: 10px;
 	text-align: right;
+	background-color: #fff;
 }
 
 .footer__text {
