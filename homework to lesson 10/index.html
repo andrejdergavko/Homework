@@ -21,7 +21,12 @@
 		<main class="main">
 			<p class="main__hello-text">Привет, Незнакомец!</p>
 			<h1 class="main__welcome-text">Добро пожаловать на главную страницу</h1>
-			<img class="main__welcome-img" src="pictures/welcome.jpg" alt="Картинка приветствия">
+			<div class="flip-card main__flip-card">
+				<div class="flip-card__front">
+					<img class="" src="pictures/welcome.jpg" alt="Картинка приветствия">
+				</div>
+				<div class="flip-card__back">Добро пожаловать!</div>
+			</div>
 			<p>У нас можно покликать по интересным ссылкам:</p>
 			<ol>
 				<li><a href="#">интересная ссылка #1</a></li>
@@ -35,8 +40,8 @@
 		<footer class="footer">
 			<div class="footer__subscription-box">
 				<h3>Новостная рассылка</h3>
-				<form class="subscription-form" action="">
-					<label><b>Email:</b> <input type="email" name="email"></label>
+				<form class="footer__subscription-form" action="">
+					<label><b>Email:</b> <input class="footer__input-email" type="email" name="email"></label>
 					<input type="submit" value="Подписаться">
 				</form>
 				<div class="footer__text">

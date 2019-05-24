@@ -1,0 +1,186 @@
+html {
+	font-family: Verdena, sans-serif;
+	line-height: 1.3em;
+	background-image: url(pictures/background.jpg);
+	background-size: cover;
+}
+
+a:visited {
+	color: #00f;
+}
+
+.wrapper{
+	margin: 15px;
+}
+
+.header {
+	width: 40%;
+	border: 1px solid #78c0e0;
+	border-radius: 10px;
+	background-color: #fff;
+	background-image: url(pictures/flower.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: right;
+}
+
+.nav__link {
+	text-decoration: none;
+}
+
+.nav__link:hover {
+	color: #9A3FD5;
+}
+
+.nav__link:active {
+	color: #f00;
+}
+
+.nav__link:hover:after {
+	content: "\27A4";
+	display: inline-block;
+	transform: rotate(180deg);
+}
+
+.main {
+	display: inline-block;
+	margin: 45px 20px 0;
+	background-color: rgba(0,130,255,0.2);
+	background-clip: border-box;
+}
+
+.main__hello-text {
+	font-weight: 700;
+}
+
+.main__welcome-text {
+	color: #150578;
+	text-shadow: 2px 2px 2px #777;
+}
+
+.flip-card {
+	width: 611px;
+	height: 271px;
+	position: relative;
+	perspective: 2000px;
+}
+
+.flip-card:hover .flip-card__front {
+	transform: rotateX(180deg);
+}
+
+.flip-card:hover .flip-card__back {
+	transform: rotateX(360deg);
+}
+
+.flip-card__front {
+	z-index: 2;
+}
+
+.flip-card__back {
+	font-size: 20px;
+	text-align: center;
+	transform: rotateX(180deg);
+	background-color: #fff;
+}
+
+.flip-card__front, .flip-card__back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	transition: 0.5s;
+}
+
+.article {
+	position: relative;
+	margin: 100px 150px 45px 150px;
+	padding: 0 10px;
+	width: 700px;
+	border: 1px solid;
+	text-align: justify;
+	text-indent: 40px;
+	letter-spacing: 2px;
+	font-family: Segoe UI;
+	line-height: 1.7em;
+	background-color: #fff;
+}
+
+.article:hover {
+	box-shadow: 0 0 20px 1px #777;
+}
+
+.article:before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	left: -40px;
+	width: 5px;
+	height: 191px;
+	background-color: #aaa;
+}
+
+.article:after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	right: -40px;
+	top: 0;
+	width: 5px;
+	height: 191px;
+	background-color: #aaa;
+}
+
+.article__title {
+	color: #3943b7;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 100;
+	
+}
+
+.article__content:first-letter {
+	font-size: 30px;
+	font-weight: 700;
+}
+
+.article__content:first-line {
+	font-style: italic;
+}
+
+.article__link {
+	text-decoration: none;
+}
+
+.article__link:hover {
+	text-decoration: underline;
+}
+
+.article__link:active {
+	color: #9A3FD5;
+}
+
+.footer__subscription-box {
+	border: 1px dashed #3943b7;
+	padding: 0 15px;
+	border-radius: 10px;
+	text-align: right;
+	background-color: #fff;
+}
+
+.footer__input-email:invalid {
+	border: 2px solid #f00;
+}
+
+.footer__input-email:valid {
+	border: 2px solid #0f0;
+}
+
+.footer__text {
+	line-height: 0.3em;
+}
+
+.footer__info {
+	font-size: 0.8em;
+	font-style: italic;
+}
