@@ -1,0 +1,179 @@
+body {
+  margin: 0;
+  background-color: #F1F1FF;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 20px;
+  margin-left: 5px;
+}
+
+/*Header
+=======================*/
+.header {
+  text-align: center;
+}
+
+.header__title {
+  display: inline-block;
+  margin: 10px 0 0 0;
+}
+
+.header__text {
+  margin: 0;
+}
+
+.header__nav {
+  display: inline-block;
+  margin: 5px;
+  text-align: left;
+}
+
+
+/*Main
+=======================*/
+.main {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.main__contents {
+  padding: 5px 5px;
+  border-radius: 10px;
+  background-color: #C6C6C6;
+}
+
+
+/*Section
+=======================*/
+.section {
+  position: relative;
+  margin: 20px 0 40px;
+  padding: 10px;
+  border-top: 2px solid;
+}
+
+.section__name {
+  display: inline-block;
+}
+
+.section__button {
+  position: absolute;
+  right: 10px;
+  padding: 5px 25px;
+  background-color: #6588DB;
+  border-radius: 10px;
+  border-right: 2px solid #21428E;
+  border-bottom: 2px solid #21428E;
+  transition: 0.1s;
+}
+
+.section__button:hover {
+  background-color: #21428E;
+  color: #fff;
+}
+
+
+/*Article
+=======================*/
+.article {
+  margin: 15px;
+  padding: 10px;
+  border: 1px solid;
+}
+
+.article:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.article__foto {
+  width: 150px;
+
+}
+
+.article__foto_left {
+  float: left;
+  margin-right: 5px;
+
+}
+
+.article__foto_right {
+  float: right;
+  margin-left: 5px;
+}
+
+
+/*Float-article
+=======================*/
+.float-article {
+  position: relative;
+  margin: 5px 0;
+  padding: 0 10px;
+  overflow: hidden;
+  width: 80px;
+  height: 45px;
+  border: 1px solid #000;
+  background-color: #CBCBFF;
+  color: #00f;
+  transition:  0.1s;
+}
+
+.float-article:active {
+  width: 900px;
+  height: 200px;
+  background-color: #fff;
+  color: #000;
+}
+
+.float-article:hover .float-article__title {
+  text-decoration: underline;
+}
+
+
+
+/*Footer
+=======================*/
+.footer {
+  float: left;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #bbb;
+  font-style: italic;
+}
+
+.footer__text {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.footer__icon {
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.footer__info {
+  margin: 5px 0;
+}
