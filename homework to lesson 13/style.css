@@ -15,6 +15,16 @@ li {
 }
 
 
+/*Navbar
+=====================*/
+.navbar {
+  margin: 0;
+  color: #eee;
+  text-align: center;
+  border-radius: 0;
+}
+
+
 /*Nav
 =====================*/
 .nav {
@@ -73,10 +83,5 @@ li {
   width: 100%;
   margin:  20px 0;
   box-shadow: 5px 5px 10px 0;
-}
-
-.main__button {
-  float: right;
-  margin: 20px 60px 30px 20px
 }
 
