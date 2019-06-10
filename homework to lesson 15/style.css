@@ -1,0 +1,107 @@
+html {
+  font-size: 30px;
+}
+
+div {
+  outline: 1px dashed #999;
+}
+
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.container-fluid {
+  margin: 0 auto;
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.row {
+  grid-column: 1/13;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  box-sizing: border-box;
+}
+
+.col-lg-1 {
+  grid-column: span 1;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.col-lg-2 {
+  grid-column: span 2;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.col-lg-3 {
+  grid-column: span 3;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.col-lg-4 {
+  grid-column: span 4;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.col-lg-5 {
+  grid-column: span 5;
+  box-sizing: border-box;
+  padding: 0 15px;
+
+}
+
+.col-lg-6 {
+  grid-column: span 6;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.col-lg-7 {
+  grid-column: span 7;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.col-lg-8 {
+  grid-column: span 8;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.col-lg-9 {
+  grid-column: span 9;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.col-lg-10 {
+  grid-column: span 10;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.col-lg-11 {
+  grid-column: span 11;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.col-lg-12 {
+  grid-column: span 12;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.col-lg-hidden {
+  display: none;
+}
