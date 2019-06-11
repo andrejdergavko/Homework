@@ -1,54 +1,80 @@
-@media (max-width: 991px) {
+@media (min-width: 768px) {
   .container {
     width: 720px;
   }
+  
+  .
 
   .col-sm-1 {
     grid-column: span 1;
+    box-sizing: border-box;
+    padding: 0 15px;
   }
 
   .col-sm-2 {
     grid-column: span 2;
+    box-sizing: border-box;
+    padding: 0 15px;
   }
 
   .col-sm-3 {
     grid-column: span 3;
+    box-sizing: border-box;
+    padding: 0 15px;
   }
 
   .col-sm-4 {
     grid-column: span 4;
+    box-sizing: border-box;
+    padding: 0 15px;
   }
 
   .col-sm-5 {
     grid-column: span 5;
+    box-sizing: border-box;
+    padding: 0 15px;
   }
 
   .col-sm-6 {
     grid-column: span 6;
+    box-sizing: border-box;
+    padding: 0 15px;
   }
 
   .col-sm-7 {
     grid-column: span 7;
+    box-sizing: border-box;
+    padding: 0 15px;
   }
 
   .col-sm-8 {
     grid-column: span 8;
+    box-sizing: border-box;
+    padding: 0 15px;
   }
 
   .col-sm-9 {
     grid-column: span 9;
+    box-sizing: border-box;
+    padding: 0 15px;
   }
 
   .col-sm-10 {
     grid-column: span 10;
+    box-sizing: border-box;
+    padding: 0 15px;
   }
 
   .col-sm-11 {
     grid-column: span 11;
+    box-sizing: border-box;
+    padding: 0 15px;
   }
 
   .col-sm-12 {
     grid-column: span 12;
+    box-sizing: border-box;
+    padding: 0 15px;
   }
 
   .col-sm-hidden {
