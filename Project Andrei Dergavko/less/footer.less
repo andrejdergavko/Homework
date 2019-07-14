@@ -1,0 +1,110 @@
+@import "variables.less";
+
+/*Footer
+====================*/
+.footer {
+  // background-color: @color1;
+  background: url(../img/bg-footer.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  color: #eee;
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.footer__grid {
+  display: grid;
+  padding: 50px 0 5px 0;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-gap: 30px;
+  grid-template-areas: 
+  "about about form"
+  "tel email form"
+  "social-title social form"
+  "info info signature";
+}
+
+.footer__about {
+  grid-area: about;
+}
+
+.footer__tel {
+  grid-area: tel;
+}
+
+.footer__email {
+  grid-area: email;
+}
+
+.footer__social-title {
+  grid-area: social-title;
+}
+
+.footer__social {
+  grid-area: social;
+}
+
+.footer__form {
+  grid-area: form;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.footer__contacts {
+  flex: 1 0;
+}
+
+.footer__question {
+  margin-left: 30px;
+  flex: 1 0;
+}
+
+.footer__label {
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.footer__input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 5px;
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+
+.footer__input_textarea {
+  height: 179px;
+}
+
+.footer__input_submit {
+  width: 50%;
+  margin-top: 10px;
+  border-color: @color2;
+  color: @color2;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: 0.1s;
+}
+
+.footer__input_submit:hover {
+  background-color:@color2;
+  color: #fff;
+}
+
+.footer__info {
+  grid-area: info;
+}
+
+.footer__signature {
+  grid-area: signature;
+}
+
+.footer__title {
+  width: 100%;
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}

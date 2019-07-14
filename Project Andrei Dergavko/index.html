@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Grodno Clinic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="libs/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="libs/bootstrap/js/bootstrap.js"></script>
+  <!-- Scripts -->
+  
+  <!-- Styles -->
+  <link rel="stylesheet" type="text/css" href="css/staff.css">
+  <link rel="stylesheet" type="text/css" href="css/services.css">
+  <link rel="stylesheet" type="text/css" href="css/fonts.css">
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+</head>
+<body>
+
+  <!-- Header 
+  ========================-->
+  <div class="header">
+    <div class="header__info-box">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__contacts">
+            <div class="header__phones">
+              <p>Call-центр: +375 33 251 44 55</p>
+              <p>+375 33 111 44 55</p>
+            </div>
+            <div class="header__email">
+              e-mail: grodsnoclinic@mail.ru
+            </div>
+          </div>
+          <div class="tool-box header__tool-box">
+            <a class="tool-box__link" href="https://vk.com" target="_blank">
+              <img class="tool-box__icon" src="img/icon/vk1.png" alt="В контакте">
+              <img class="tool-box__icon tool-box__icon_hover" src="img/icon/vk2.png" alt="В контакте">
+            </a>
+            <a class="tool-box__link" href="https://www.instagram.com" target="_blank">
+              <img class="tool-box__icon" src="img/icon/instagram1.png" alt="instagram">
+              <img class="tool-box__icon tool-box__icon_hover" src="img/icon/instagram2.png" alt="instagram">
+            </a>
+            <a class="tool-box__link" href="https://www.facebook.com" target="_blank">
+              <img class="tool-box__icon" src="img/icon/facebook1.png" alt="facebook">
+              <img class="tool-box__icon tool-box__icon_hover" src="img/icon/facebook2.png" alt="facebook">
+            </a>
+            <a class="tool-box__link" href="https://web.telegram.org" target="_blank">
+              <img class="tool-box__icon" src="img/icon/telegram1.png" alt="telegram">
+              <img class="tool-box__icon tool-box__icon_hover" src="img/icon/telegram2.png" alt="telegram">
+            </a>
+            <button class="tool-box__search">
+              <img class="tool-box__icon" src="img/icon/search1.png" alt="search">
+              <img class="tool-box__icon tool-box__icon_hover" src="img/icon/search2.png" alt="search">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div> <!-- /.info-box -->
+
+    <div class="container">
+      <div class="header__wrapper">
+        <a class="header__logo" href="index.html">Grodno clinic <span class="header__plus">+</span></a>
+        <div class="nav header_nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link nav__link_active" href="index.html">Главная</a></li>
+            <li class="nav__item"><a class="nav__link" href="about.html">О клинике</a></li>
+            <li class="nav__item"><a class="nav__link" href="services.html">Услуги и цены</a></li>
+            <li class="nav__item"><a class="nav__link" href="staff.html">Врачи</a></li>
+            <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
+          </ul>
+        </div> <!-- /.nav -->
+        <div class="burger-menu header__burger-menu">
+
+          <button id="burger-button" class="burger-menu__button">
+            <span class="burger-menu__lines"></span>
+          </button>
+
+          <div id="burger-slider" class="burger-menu__slider">
+            <nav class="nav burger-menu__nav">
+              <ul class="nav__list nav__list_mobile">
+                <li class="nav__item"><a class="nav__link nav__link_active" href="index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="about.html">О клинике</a></li>
+                <li class="nav__item"><a class="nav__link" href="services.html">Услуги и цены</a></li>
+                <li class="nav__item"><a class="nav__link" href="staff.html">Врачи</a></li>
+                <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
+              </ul>
+            </nav>
+
+            <div class="burger-menu__social tool-box">
+              <a class="tool-box__link" href="https://vk.com" target="_blank">
+                <img class="tool-box__icon" src="img/icon/vk1.png" alt="В контакте">
+                <img class="tool-box__icon tool-box__icon_hover" src="img/icon/vk2.png" alt="В контакте">
+              </a>
+              <a class="tool-box__link" href="https://www.instagram.com" target="_blank">
+                <img class="tool-box__icon" src="img/icon/instagram1.png" alt="instagram">
+                <img class="tool-box__icon tool-box__icon_hover" src="img/icon/instagram2.png" alt="instagram">
+              </a>
+              <a class="tool-box__link" href="https://www.facebook.com" target="_blank">
+                <img class="tool-box__icon" src="img/icon/facebook1.png" alt="facebook">
+                <img class="tool-box__icon tool-box__icon_hover" src="img/icon/facebook2.png" alt="facebook">
+              </a>
+              <a class="tool-box__link" href="https://web.telegram.org" target="_blank">
+                <img class="tool-box__icon" src="img/icon/telegram1.png" alt="telegram">
+                <img class="tool-box__icon tool-box__icon_hover" src="img/icon/telegram2.png" alt="telegram">
+              </a>
+
+            </div> <!-- /.burger-menu__social -->
+          </div> <!-- /.burger-menu__slider -->
+        </div> <!-- /.burger-menu -->
+      </div>
+    </div> <!-- /.container -->
+  </div> <!-- /.header -->
+
+  <!-- Main
+  ========================-->
+  <main class="main">
+
+
+    <!-- Carousel
+    ========================-->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+
+        <div class="carousel__item item active">
+          <div class="container">
+            <div class="carousel__wrapper">
+              <h3 class="carousel__title">Добро пожаловать в современную клиннику</h3>
+              <p class="carousel__text">GRODNO CLINIC- это высочайший уровень медецины и человеческого подхода к пациенту</p>
+            </div>
+          </div>
+          <div class="carousel__img carousel__img_first"></div>
+        </div>
+
+        <div class="carousel__item item">
+          <div class="container">
+            <div class="carousel__wrapper">
+              <h3 class="carousel__title">Мы помогаем стать родителями</h3>
+              <p class="carousel__text">Диогностируем причину бесплодия</p>
+            </div>
+          </div>
+          <div class="carousel__img carousel__img_second"></div>
+        </div>
+
+        <div class="carousel__item item">
+          <div class="container">
+            <div class="carousel__wrapper">
+              <h3 class="carousel__title">Ребенок- самый важный пациент</h3>
+              <p class="carousel__text">Преглашаем с самых первых дней жизни</p>
+            </div>
+          </div>
+          <div class="carousel__img carousel__img_third"></div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div> <!-- /.carousel -->
+
+
+    <!-- Breadcrumbs 
+    ========================-->
+    <div class="container">
+      <div class="breadcrumbs">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+      </div>
+    </div>
+    
+
+    <div class="container">
+      
+      <!-- Reservation
+      ========================-->
+      <section class="reservation">
+        <h2 class="reservation__title">Запись на прием</h2>
+        <form class="reservation__form" action="">
+          <div class="reservation__wrapper">
+            <select class="reservation__input reservation__input_sity" required>
+              <option>Город</option>
+              <option>Гродно</option>
+              <option>Минск</option>
+              <option>Брест</option>
+            </select>
+            <select class="reservation__input reservation__input_position" required>
+              <option>Специальность</option>
+              <option>Хирург</option>
+              <option>Психолог</option>
+              <option>Алерголог</option>
+            </select>
+            <input class="reservation__input reservation__input_name" type="text" name="name" placeholder="Ваше имя" required>
+            <input class="reservation__input reservation__input_tel" type="tel" name="tel" placeholder="Ваш телефон" required>
+            <input class="reservation__input reservation__input_submit" type="submit" name="submit" value="Записаться" required>
+          </div>
+          <input class="reservation__input reservation__input_submit-sm" type="submit" name="submit" value="Записаться" required>
+        </form>
+      </section> <!-- /.reservation -->
+      
+
+      <!-- Services 
+      ========================-->
+      <section class="services">
+
+        <div class="section-title">
+          <a href="services.html">Наша специализация</a>
+        </div>
+
+        <div class="services__grid">
+          <div class="services__item">
+            <div class="services__header">
+              <img class="services__icon" src="img/icon/services1.png" alt="">
+              <h3 class="services__title">Женщинам</h3>
+              <p class="services__text">Мы знаем ваши потребности</p>
+            </div>
+            <div class="services__links">
+              <a class="services__link" href="#">Геникология</a>
+              <a class="services__link" href="#">Неврология</a>
+              <a class="services__link" href="#">Урогенекология</a>
+              <a class="services__link" href="#">Ревматология</a>
+              <a class="services__link" href="#">Диетология</a>
+              <a class="services__link" href="#">Деабетология</a>
+              <a class="services__link" href="#">Диагностика ЗППП</a>
+              <a class="services__link" href="#">Хирургия</a>
+            </div>
+          </div>
+
+          <div class="services__item">
+            <div class="services__header">
+              <img class="services__icon" src="img/icon/services2.png" alt="">
+              <h3 class="services__title">Детям</h3>
+              <p class="services__text">Опека от первых дней жизни</p>
+            </div>
+            <div class="services__links">
+              <a class="services__link" href="#">Алергология</a>
+              <a class="services__link" href="#">Ларингология</a>
+              <a class="services__link" href="#">Дермотология</a>
+              <a class="services__link" href="#">Хирургия</a>
+              <a class="services__link" href="#">Детская неврология</a>
+              <a class="services__link" href="#">Педиатрия</a>
+              <a class="services__link" href="#">Психология</a>
+              <a class="services__link" href="#">Пульмонология</a>
+            </div>
+          </div>
+
+          <div class="services__item">
+            <div class="services__header">
+              <img class="services__icon" src="img/icon/services3.png" alt="">
+              <h3 class="services__title">Мужчинам</h3>
+              <p class="services__text">Профилактика и лечение</p>
+            </div>
+            <div class="services__links">
+              <a class="services__link" href="#">Урология</a>
+              <a class="services__link" href="#">Андрология</a>
+              <a class="services__link" href="#">Неврология</a>
+              <a class="services__link" href="#">Хирургия</a>
+              <a class="services__link" href="#">Проктология</a>
+              <a class="services__link" href="#">Ревмотология</a>
+              <a class="services__link" href="#">Диагностика ЗППП</a>
+              <a class="services__link" href="#">Диетология</a>
+              <a class="services__link" href="#">Диабетология</a>
+            </div>
+          </div>
+
+          <div class="services__item">
+            <div class="services__header">
+              <img class="services__icon" src="img/icon/services5.png" alt="">
+              <h3 class="services__title">Безплодие</h3>
+              <p class="services__text">Помогаем стать родителями</p>
+            </div>
+            <div class="services__links">
+              <a class="services__link" href="#">Геникология и акушерство</a>
+              <a class="services__link" href="#">Урология</a>
+              <a class="services__link" href="#">Андрология</a>
+              <a class="services__link" href="#">Ревматология</a>
+              <a class="services__link" href="#">Безплодие</a>
+              <a class="services__link" href="#">Лабораторное иследование</a>
+              <a class="services__link" href="#">Диагностика ЗППП</a>
+              <a class="services__link" href="#">Ультразвуковая диагностика</a>
+            </div>
+          </div>
+
+        </div> <!-- /.services__grid -->
+
+        <a class="services__button button" href="services.html">Показать еще</a>
+
+      </section> <!-- /.services -->
+
+
+      <!-- Staff 
+      ========================-->
+      <section class="staff">
+
+        <div class="section-title">
+          <a href="staff.html">Наши специалисты</a>
+        </div>
+
+        <div class="staff__grid">
+          
+          <div class="staff__item">
+            <img class="staff__img" src="img/staff/staff1.jpg" alt="Медецинский центр">
+            <div class="staff__info">
+              <h3 class="staff__name"><span class="staff__surname">Бойко</span> Владимир Романович</h3>
+              <p class="staff__position">Хирург</p>
+              <p><span class="staff__label">Стаж:</span> 10 лет</p>
+              <p><span class="staff__label">Категория:</span> высшая</p>
+              <p><span class="staff__label">Работает:</span></p>
+              <p class="staff__adress">г. Гродно, ул. Пролетарская, 8</p>
+              <a class="staff__link" href="#">Подробнее</a>
+            </div>
+          </div>
+          <div class="staff__item">
+            <img class="staff__img" src="img/staff/staff2.jpg" alt="Медецинский центр">
+            <div class="staff__info">
+              <h3 class="staff__name"><span class="staff__surname">Карпицкий</span> Андрей Валерьевич</h3>
+              <p class="staff__position">Пластический хирург</p>
+              <p><span class="staff__label">Стаж:</span> 7 лет</p>
+              <p><span class="staff__label">Категория:</span> первая</p>
+              <p><span class="staff__label">Работает:</span></p>
+              <p class="staff__adress">г. Гродно, ул. Пролетарская, 8</p>
+              <a class="staff__link" href="#">Подробнее</a>
+            </div>
+          </div>
+          <div class="staff__item">
+            <img class="staff__img" src="img/staff/staff3.jpg" alt="Медецинский центр">
+            <div class="staff__info">
+              <h3 class="staff__name"><span class="staff__surname">Войлов</span> Андрей Андреевич</h3>
+              <p class="staff__position">Нарколог</p>
+              <p><span class="staff__label">Стаж:</span> 11 лет</p>
+              <p><span class="staff__label">Категория:</span> высшая</p>
+              <p><span class="staff__label">Работает:</span></p>
+              <p class="staff__adress">г. Гродно, ул. Пролетарская, 8</p>
+              <a class="staff__link" href="#">Подробнее</a>
+            </div>
+          </div>
+          <div class="staff__item">
+            <img class="staff__img" src="img/staff/staff4.jpg" alt="Медецинский центр">
+            <div class="staff__info">
+              <h3 class="staff__name"><span class="staff__surname">Качинская</span> Анна Витальевна</h3>
+              <p class="staff__position">Косметолог</p>
+              <p><span class="staff__label">Стаж:</span> 8 лет</p>
+              <p><span class="staff__label">Категория:</span> высшая</p>
+              <p><span class="staff__label">Работает:</span></p>
+              <p class="staff__adress">г. Гродно, ул. Пролетарская, 8</p>
+              <a class="staff__link" href="#">Подробнее</a>
+            </div>
+          </div>
+
+        </div> <!-- /.staff__grid -->
+
+        <a class="staff__button button" href="staff.html">Показать еще</a>
+
+      </section> <!-- /.staff -->
+
+  
+      <!-- Call-box 
+      ========================-->
+      <section class="call-box">
+        
+        <img class="call-box__icon" src="img/icon/call-box.png" alt="">
+        
+        <div class="call-box__tel">
+          <h3 class="call-box__title">Call-центр</h3>
+          <p class="call-box__number"> +375 (33) 251 44 55</p>
+          <p class="call-box__number">+375 (33) 111 44 55</p>
+        </div>
+
+        <div class="call-box__back-call">
+          <h3 class="call-box__title">Заказать звонок</h3>
+          <form class="call-box__form" action="">
+            <input class="call-box__input" type="tel" placeholder="+375292554414" required="true">
+            <button class="call-box__button" type="submit">Заказать</button>
+          </form>
+        </div>
+
+      </section> <!-- /.call-box -->
+
+    </div> <!-- /.container -->
+
+
+    <!-- Map 
+    ========================-->
+    <section class="map">
+      <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d617.7169108452533!2d23.831014766137592!3d53.68650501110164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dfd6213de474eb%3A0xe08064bc34c7aa99!2sGrodno+Branch+of+Hi-Tech+Park+of+Belarus!5e0!3m2!1sru!2sby!4v1561656107595!5m2!1sru!2sby" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+  </main> <!-- /.main -->
+
+
+  <!-- Footer 
+  ========================-->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__about">
+          <h3 class="footer__title">Медецинский центр Grodno Clinic</h3>
+          <p>является медицинским учреждением, оказывающим помощь женщинам, мужчинам и детям всех возрастов.</p>
+        </div>
+        <div class="footer__tel">
+          <h3 class="footer__title">Звоните нам</h3>
+          <p>+375 33 251 44 55 (mts)</p>
+          <p>+375 33 111 44 55 (velcom)</p>
+        </div>
+        <div class="footer__email">
+          <h3 class="footer__title">Электронная почта</h3>
+          <p>grodsnoclinic@mail.ru</p>
+        </div>
+        <div class="footer__social-title">
+          <h3 class="footer__title">Мы в соцсетях</h3>
+        </div>
+        <div class="footer__social tool-box">
+            <a class="tool-box__link" href="https://vk.com" target="_blank">
+              <img class="tool-box__icon" src="img/icon/vk1.png" alt="В контакте">
+              <img class="tool-box__icon tool-box__icon_hover" src="img/icon/vk2.png" alt="В контакте">
+            </a>
+            <a class="tool-box__link" href="https://www.instagram.com" target="_blank">
+              <img class="tool-box__icon" src="img/icon/instagram1.png" alt="instagram">
+              <img class="tool-box__icon tool-box__icon_hover" src="img/icon/instagram2.png" alt="instagram">
+            </a>
+            <a class="tool-box__link" href="https://www.facebook.com" target="_blank">
+              <img class="tool-box__icon" src="img/icon/facebook1.png" alt="facebook">
+              <img class="tool-box__icon tool-box__icon_hover" src="img/icon/facebook2.png" alt="facebook">
+            </a>
+            <a class="tool-box__link" href="https://web.telegram.org" target="_blank">
+              <img class="tool-box__icon" src="img/icon/telegram1.png" alt="telegram">
+              <img class="tool-box__icon tool-box__icon_hover" src="img/icon/telegram2.png" alt="telegram">
+            </a>
+          </div>
+        <form class="footer__form" action="">
+          <h3 class="footer__title">Задать вопрос</h3>
+          <div class="footer__contacts">
+            <label class="footer__label" for="name">Фамилия Имя Отчество:</label>
+            <input class="footer__input" type="text" name="name" required="true">
+            <label class="footer__label" for="tel">Контактный номер телефона:</label>
+            <input class="footer__input" type="tel" name="tel" required="true">
+            <label class="footer__label" for="email">Адрес электронной почты:</label>
+            <input class="footer__input" type="email" name="email" required="true">
+            <input class="footer__input footer__input_submit" type="submit" name="submit">
+          </div>
+          <div class="footer__question">
+            <label class="footer__label" for="email">Ваш вопрос:</label>
+            <textarea class="footer__input footer__input_textarea" name="question" required="true"></textarea>
+          </div>
+        </form>
+        <div class="footer__info">© 2019 ООО "Гродно Клиник"</div>
+        <div class="footer__signature">Сайт разработал: Дергавко Андрей</div>
+      </div>
+    </div> <!-- /.container -->
+  </footer><!-- /.footer -->
+  <script type="text/javascript" src="js/burger-menu.js"></script>
+</body>
+</html>

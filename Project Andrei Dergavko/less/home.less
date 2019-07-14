@@ -1,0 +1,387 @@
+@import "variables.less";
+
+
+/*Carousel
+====================*/
+.carousel {
+  // z-index: -2;
+}
+
+.carousel-indicators li {
+  background-color: #eee;
+  border: none;
+}
+
+.carousel-indicators .active {
+  background-color: @color2;
+  border: none;
+}
+
+.carousel__item {
+  position: relative;
+  height: 350px;
+}
+
+.carousel__img {
+  position: absolute;
+  height: 350px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.carousel__img_first {
+  background: linear-gradient(to right, rgb(237,245,249) 20%, transparent 80%),
+    url(../img/carousel/carousel1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.carousel__img_second {
+  background: linear-gradient(to right, rgb(237,245,249) 20%, transparent 80%), 
+    url(../img/carousel/carousel2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.carousel__img_third {
+  background: linear-gradient(to right, rgb(237,245,249) 20%, transparent 80%), 
+    url(../img/carousel/carousel3.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.carousel__wrapper {
+  width: 80%;
+  margin-top: 100px;
+}
+
+.carousel__title {
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.carousel__text {
+  font-weight: 300;
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+
+/*Breadcrumbs
+====================*/
+.breadcrumbs {
+  margin-top: 10px;
+}
+
+.breadcrumbs__link {
+  display: inline-block;
+  margin-right: 5px;
+  padding-right: 5px;
+}
+
+.breadcrumbs__link:hover {
+  color: @color2;
+}
+
+.breadcrumbs__link:after {
+  content: "\203A";
+  position: relative;
+  left: 5px;
+  color: @color3;
+  font-size: 20px;
+}
+
+
+/*Reservation
+====================*/
+.reservation {
+  width: 100%;
+  height: 190px;
+  margin: 25px 0;
+  padding: 30px;
+  background-color: @color1;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+}
+
+.reservation__title {
+  font-size: 35px;
+  font-weight: 100;
+  color: #eee;
+}
+
+.reservation__form {
+  text-align: center;
+}
+
+.reservation__wrapper {
+  position: relative;
+  display: flex;
+  margin: 10px 0;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px -14px rgba(0,0,0,0.5);
+}
+
+.reservation__input {
+  padding: 10px;
+  color: @color1_dark;
+  font-size: 25px;
+  font-weight: 100;
+  border: none;
+  border-right: 1px solid @color1;
+}
+
+.reservation__input:last-child {
+  border: none;
+}
+
+.reservation__input::placeholder {
+  color: @color1_dark;
+}
+
+.reservation__input:checked {
+  color: @color3;
+}
+
+.reservation__input_name {
+  flex: 1 1;
+  min-width: 190px;
+}
+
+.reservation__input_tel {
+  flex: 1 1;
+  min-width: 190px;
+  padding-right: 150px;
+}
+
+.reservation__input_submit {
+  position: absolute;
+  right: 0;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border: none;
+  color: #eee;
+  font-weight: 300;
+  border-radius: 50px;
+  background: linear-gradient(to top, @color3 50%, @color3_l);
+  transition:  2s;
+}
+
+.reservation__input_submit-sm {
+  display: none;
+  margin: 5px;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  border: none;
+  color: #eee;
+  font-weight: 300;
+  border-radius: 50px;
+  background: linear-gradient(to top, @color3 50%, @color3_l);
+  transition:  2s;
+}
+
+.reservation__input_submit:hover {
+  background: linear-gradient(to bottom, @color3 50%, @color3_l);
+}
+
+
+/*Services
+====================*/
+.services__grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-gap: 15px;
+  margin: 10px 0 30px;
+}
+
+.services__links {
+  padding: 15px;
+  font-size: 16px;
+}
+
+.services__button {
+  margin-left: auto;
+}
+
+
+/*Staff
+====================*/
+.staff__grid {
+  margin: 0px 0px 30px;
+}
+
+.staff__button {
+  margin-left: auto;
+}
+
+
+/* Call-box
+====================*/
+.call-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 190px;
+  margin: 70px 0;
+  padding: 8px;
+  color: #eee;
+  background: linear-gradient(to top, @color1 20%, @color1_l);
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+}
+
+.call-box__icon {
+  margin-left: 20px;
+  width: 100px;
+}
+
+.call-box__tel {
+  flex: 3 0;
+  text-align: center;
+  border-right: 1px solid @color2;
+}
+
+.call-box__back-call {
+  flex: 2 0;
+  min-width: 330px;
+  max-width: 314px;
+  text-align: center;
+}
+
+.call-box__title {
+  font-weight: 100;
+  font-size: 35px;
+}
+
+.call-box__number {
+  display: inline-block;
+  margin: 10px;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.call-box__form {
+  display: flex;
+  position: relative;
+  width: 80%;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+.call-box__input {
+  width: 100%;
+  padding: 10px;
+  color: @color4;
+  border: none;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.call-box__input::placeholder {
+  color: #ddd;
+}
+
+.call-box__button {
+  position: absolute;
+  right: 0px;
+  padding: 10px;
+  background-color: @color3;
+  border: none;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+  transition: 0.1s;
+}
+
+.call-box__button:hover {
+  background-color: @color2;
+}
+
+
+/* Map
+====================*/
+.map {
+  width: 100%;
+  height: 500px;
+}
+
+.map__iframe {
+  width: 100%;
+  height: 100%;
+}
+
+
+@media (max-width: 1130px) {
+  .staff__grid {
+    grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
+  }
+
+  .services__grid {
+    grid-template-columns: repeat(auto-fit, minmax(357px, 1fr));
+  }
+}
+
+@media (max-width: 938px) {
+  .reservation__input {
+    padding: 3px;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .reservation__input_submit {
+    display: none;
+  }
+
+  .reservation__input_submit-sm {
+    display: inline-block;
+    padding: 3px 20px;
+
+  }
+}
+
+@media (max-width: 768px) {
+  /* Call-box
+  ====================*/
+  .reservation {
+    height: auto;
+  }
+
+  .reservation__wrapper {
+    flex-direction: column;
+    border-radius: 0px;
+    background-color: none;
+  }
+
+  .reservation__input {
+    margin: 10px 0;
+    background-color: #fff;
+    border-radius: 50px;
+
+  }
+
+
+
+
+
+
+
+
+
+  /* Call-box
+  ====================*/
+  .call-box {
+    flex-direction: column;
+    height: auto;
+  }
+  .call-box__icon {
+    margin: 0;
+  }
+  .call-box__tel {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-right: none;
+    border-bottom: 1px solid @color2;
+  }
+}

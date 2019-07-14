@@ -1,0 +1,147 @@
+@import "variables.less";
+
+/*Header
+====================*/
+.nav__item_active {
+  color: @color3;
+}
+
+
+/*Intro
+====================*/
+.intro {
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(to right, rgb(237,245,249) 20%, transparent 100%), 
+    url(../img/intro/staff.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 10% 33%;
+}
+
+.intro__inner {
+  padding-top: 80px;
+}
+
+.intro__title {
+  font-size: 45px;
+  font-weight: 300;
+}
+
+.intro__text {
+  font-weight: 300;
+  font-size: 22px;
+  margin: 20px 0;
+  width: 800px;
+}
+
+
+/*Breadcrumbs
+====================*/
+.breadcrumbs {
+  margin-top: 10px;
+}
+
+.breadcrumbs__link {
+  display: inline-block;
+  margin-right: 5px;
+  padding-right: 5px;
+}
+
+.breadcrumbs__link:hover {
+  color: @color2;
+}
+
+.breadcrumbs__link:after {
+  content: "\203A";
+  position: relative;
+  left: 5px;
+  color: @color3;
+  font-size: 20px;
+}
+
+
+/*Staff
+====================*/
+.staff__title {
+  border: none;
+}
+
+.staff__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-gap: 20px;
+
+  margin: 40px 0px 30px;
+}
+
+.staff__item {
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  border-radius: 0.25rem;
+}
+
+.staff__img {
+  width: 100%;
+}
+
+.staff__info {
+  padding: 0 15px 15px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.staff__name {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 23px;
+  
+}
+
+.staff__surname {
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.staff__label {
+  font-size: 15px;
+}
+
+.staff__position {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  color: @color2;
+  font-size: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.staff__link {
+  display: block;
+  padding: 5px;
+  margin-top: 10px;
+  color: @color4;
+  border: 1px solid #ddd;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.15s;
+}
+
+.staff__link:hover {
+  color: #fff;
+  background-color: @color1;
+  border: 1px solid @color1;
+}
+
+.staff__adress {
+  font-size: 15px;
+  font-weight: 500
+}
+
+.staff__btn {
+margin: 60px auto;
+border: none;
+}

@@ -1,0 +1,66 @@
+@import "variables.less";
+
+body {
+  margin: 0;
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 18px;
+  color: @color4;
+  background-color: @bg;
+}
+
+a {
+  text-decoration: none;
+  color: @color4;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  color: @color2;
+  text-decoration: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0;
+  padding: 0 15px;
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.button {
+  display: block;
+  width: 170px;  
+  padding: 5px 15px;
+  text-align: center;
+  color: #eee;
+  font-weight: 300;
+  font-size: 15px;
+  text-transform: uppercase;
+  background: linear-gradient(to top, @color1 20%, @color1_l);
+  transition: 0.2s;
+}
+
+.button:hover {
+  color: #eee;
+  background: linear-gradient(to bottom, @color2 50%, @color2_l);
+}
+
+.section-title {
+  display: block;
+  margin: 60px 0 30px;
+  font-size: 30px;
+  border-bottom: 1px solid @color3;
+}
