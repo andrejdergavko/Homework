@@ -1,0 +1,33 @@
+/*Intro
+====================*/
+.intro {
+  width: 100%;
+  height: 300px;
+}
+.intro__inner {
+  padding-top: 80px;
+}
+.intro__title {
+  width: 90%;
+  font-size: 45px;
+  font-weight: 300;
+}
+.intro__text {
+  font-weight: 300;
+  font-size: 22px;
+  margin: 20px 0;
+  width: 650px;
+}
+@media (max-width: 1090px) {
+  .intro__title {
+    font-size: 35px;
+  }
+  .intro__text {
+    font-size: 18px;
+  }
+}
+@media (max-width: 740px) {
+  .intro__text {
+    display: none;
+  }
+}

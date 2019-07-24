@@ -22,6 +22,7 @@ body {
 }
 
 .header__info-box {
+  position: relative;
   width: 100%;
   padding: 10px 0;
   background-color: @color1;
@@ -38,7 +39,17 @@ body {
   margin-right: 20px;
 }
 
-.header__tool-box {
+.header__search-box {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+
+/* Tool-box
+====================*/
+.tool-box {
+  display: flex;
 }
 
 .tool-box__link {
@@ -77,6 +88,63 @@ body {
 
 .tool-box__search:hover .tool-box__icon_hover {
   opacity: 1;
+}
+
+
+/*Search-box
+====================*/
+.search-box {
+  padding: 10px 0;
+  width: 100%;
+  height: 80%;
+  transform: translate(0, -200%);
+  background-color: #fff;
+  box-shadow: 0 20px 40px -10px rgba(0,0,0,0.40);
+  transition: 0.3s;
+}
+
+.search__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.search-box__icon {
+  width: 25px;
+  height: 25px;
+}
+
+.search-box__form {
+  flex: 1 0;
+  margin: 0 20px;
+  display: inline-block;
+  width: auto;
+}
+
+.search-box__intut {
+  width: 100%;
+  outline: none;
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid @color3;
+}
+
+.search-box__intut::placeholder {
+  transition: 0.3s;
+}
+
+.search-box__intut:checked::placeholder {
+  transform: translate(100%);
+  color: transparent;
+}
+
+.search-box__button {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  transition: 0.3s;
 }
 
 .header__logo {
@@ -151,7 +219,7 @@ body {
 ====================*/
 .burger-menu {
   display: none;
-  margin: 10px 0;
+  margin: 12px 0;
   height: 40px;
 }
 
@@ -216,7 +284,7 @@ body {
   height: 100vh;
   background-color: #f3f5f5;
   transition: 0.3s;
-  z-index: 30;
+  z-index: -1;
 }
 
 .burger-menu__nav {
@@ -224,6 +292,7 @@ body {
 }
 
 .nav__list_mobile {
+  margin: 10% 0;
   height: 80%;
   overflow: auto;
   flex-direction: column;
@@ -240,6 +309,7 @@ body {
   bottom: 0px;
 }
 
+
 @keyframes header-anim {
   80% {
     transform: rotate(0deg);
@@ -252,21 +322,17 @@ body {
 
 
 @media (max-width: 768px) {
-  body {
-    padding-top: 60px;
-  }
-
-  .header {
-    
-  }
-
-  .header_nav {
+  .header__nav {
     display: none;
   }
-  .header__info-box {
-    display: none;
-  }
+
   .header__burger-menu {
     display: block;
+  }
+}
+
+@media (max-width: 540px) {
+  .header__email {
+    display: none;
   }
 }

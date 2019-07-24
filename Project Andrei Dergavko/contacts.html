@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Контакты</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <!-- Bootstrap -->
   <link href="libs/bootstrap/css/bootstrap.css" rel="stylesheet">
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -15,6 +16,7 @@
   <link rel="stylesheet" type="text/css" href="css/fonts.css">
   <link rel="stylesheet" type="text/css" href="css/common.css">
   <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/intro.css">
   <link rel="stylesheet" type="text/css" href="css/contacts.css">
   <link rel="stylesheet" type="text/css" href="css/footer.css">
 </head>
@@ -22,7 +24,7 @@
 
   <!-- Header 
   ========================-->
-  <div class="header">
+  <header id="header" class="header">
     <div class="header__info-box">
       <div class="container">
         <div class="header__wrapper">
@@ -52,19 +54,34 @@
               <img class="tool-box__icon" src="img/icon/telegram1.png" alt="telegram">
               <img class="tool-box__icon tool-box__icon_hover" src="img/icon/telegram2.png" alt="telegram">
             </a>
-            <button class="tool-box__search">
+            <button id="btn-search-open" class="tool-box__search">
               <img class="tool-box__icon" src="img/icon/search1.png" alt="search">
               <img class="tool-box__icon tool-box__icon_hover" src="img/icon/search2.png" alt="search">
             </button>
           </div>
         </div>
       </div>
-    </div> <!-- /.info-box -->
+
+      <div id="search-box" class="search-box header__search-box">
+        <div class="container">
+          <div class="search__wrapper">
+            <img class="search-box__icon" src="img/icon/search-box.png" alt="Поиск">
+            <form class="search-box__form" action="">
+              <input id="search-input" class="search-box__intut" type="search" name="search" placeholder="например: геникология">
+            </form>
+            <button id="btn-search-close" class="search-box__button">
+              <img class="search-box__icon" src="img/icon/exit.png" alt="Закрыть">
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- /.header__info-box -->
 
     <div class="container">
       <div class="header__wrapper">
         <a class="header__logo" href="index.html">Grodno clinic <span class="header__plus">+</span></a>
-        <div class="nav header_nav">
+        <nav class="nav header__nav">
           <ul class="nav__list">
             <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
             <li class="nav__item"><a class="nav__link" href="about.html">О клинике</a></li>
@@ -72,10 +89,27 @@
             <li class="nav__item"><a class="nav__link" href="staff.html">Врачи</a></li>
             <li class="nav__item"><a class="nav__link nav__link_active" href="contacts.html">Контакты</a></li>
           </ul>
-        </div> <!-- /.nav -->
+        </nav> <!-- /.nav -->
+
+        <div class="burger-menu header__burger-menu">
+          <button id="burger-button" class="burger-menu__button">
+            <span class="burger-menu__lines"></span>
+          </button>
+          <div id="burger-slider" class="burger-menu__slider">
+            <nav class="nav burger-menu__nav">
+              <ul class="nav__list nav__list_mobile">
+                <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="about.html">О клинике</a></li>
+                <li class="nav__item"><a class="nav__link" href="services.html">Услуги и цены</a></li>
+                <li class="nav__item"><a class="nav__link" href="staff.html">Врачи</a></li>
+                <li class="nav__item"><a class="nav__link nav__link_active" href="contacts.html">Контакты</a></li>
+              </ul>
+            </nav>
+          </div> <!-- /.burger-menu__slider -->
+        </div> <!-- /.burger-menu -->
       </div>
     </div> <!-- /.container -->
-  </div> <!-- /.header -->
+  </header> <!-- /.header -->
 
   <!-- Main
   ========================-->
@@ -108,16 +142,22 @@
     ========================-->
     <div class="container">
       <div class="center-cards">
-
-        <div class="center-cards__btn-block btn-group">
-          <button type="button" class="center-cards__btn btn btn-default">Все</button>
-          <button type="button" class="center-cards__btn btn btn-default">Гродно</button>
-          <button type="button" class="center-cards__btn btn btn-default">Минск</button>
-          <button type="button" class="center-cards__btn btn btn-default">Брест</button>
+      
+        <div class="center-cards__title section-title">
+          <a href="services.html">Контакты</a>
+        </div>
+        
+        <div class="center-cards__btn-block">
+          <div class="center-cards__btn-group btn-group">
+            <button id="btn-all" type="button" class="center-cards__btn btn btn-default">Все</button>
+            <button id="btn-grodno" type="button" class="center-cards__btn btn btn-default">Гродно</button>
+            <button id="btn-minsk" type="button" class="center-cards__btn btn btn-default">Минск</button>
+            <button id="btn-brest" type="button" class="center-cards__btn btn btn-default">Брест</button>
+          </div>
         </div>
           
         <div class="center-cards__grid">
-          <div class="center-cards__item">
+          <div class="center-cards__item center-cards__item_grodno">
             <img class="center-cards__img" src="img/centers/center1.jpg" alt="Медецинский центр">
             <div class="center-cards__info">
               <p class="center-cards__adress-title">Адрес</p>
@@ -129,7 +169,7 @@
               <a class="center-cards__map" href="https://goo.gl/maps/SShErf4ufbEU4iEj6" target="_blank">Показать на карте</a>
             </div>
           </div>
-          <div class="center-cards__item">
+          <div class="center-cards__item center-cards__item_grodno">
             <img class="center-cards__img" src="img/centers/center2.jpg" alt="Медецинский центр">
             <div class="center-cards__info">
               <p class="center-cards__adress-title">Адрес</p>
@@ -141,7 +181,7 @@
               <a class="center-cards__map" href="https://goo.gl/maps/SShErf4ufbEU4iEj6" target="_blank">Показать на карте</a>
             </div>
           </div>
-          <div class="center-cards__item">
+          <div class="center-cards__item center-cards__item_grodno">
             <img class="center-cards__img" src="img/centers/center3.jpg" alt="Медецинский центр">
             <div class="center-cards__info">
               <p class="center-cards__adress-title">Адрес</p>
@@ -153,7 +193,7 @@
               <a class="center-cards__map" href="https://goo.gl/maps/SShErf4ufbEU4iEj6" target="_blank">Показать на карте</a>
             </div>
           </div>
-          <div class="center-cards__item">
+          <div class="center-cards__item center-cards__item_minsk">
             <img class="center-cards__img" src="img/centers/center4.jpg" alt="Медецинский центр">
             <div class="center-cards__info">
               <p class="center-cards__adress-title">Адрес</p>
@@ -165,7 +205,7 @@
               <a class="center-cards__map" href="https://goo.gl/maps/SShErf4ufbEU4iEj6" target="_blank">Показать на карте</a>
             </div>
           </div>
-          <div class="center-cards__item">
+          <div class="center-cards__item center-cards__item_minsk">
             <img class="center-cards__img" src="img/centers/center5.jpg" alt="Медецинский центр">
             <div class="center-cards__info">
               <p class="center-cards__adress-title">Адрес</p>
@@ -177,7 +217,7 @@
               <a class="center-cards__map" href="https://goo.gl/maps/SShErf4ufbEU4iEj6" target="_blank">Показать на карте</a>
             </div>
           </div>
-          <div class="center-cards__item">
+          <div class="center-cards__item center-cards__item_brest">
             <img class="center-cards__img" src="img/centers/center6.jpg" alt="Медецинский центр">
             <div class="center-cards__info">
               <p class="center-cards__adress-title">Адрес</p>
@@ -189,7 +229,7 @@
               <a class="center-cards__map" href="https://goo.gl/maps/SShErf4ufbEU4iEj6" target="_blank">Показать на карте</a>
             </div>
           </div>
-          <div class="center-cards__item">
+          <div class="center-cards__item center-cards__item_brest">
             <img class="center-cards__img" src="img/centers/center7.jpg" alt="Медецинский центр">
             <div class="center-cards__info">
               <p class="center-cards__adress-title">Адрес</p>
@@ -210,28 +250,40 @@
       <form class="question-form"  action="">
         <h2 class="question-form__title">Задайте нам вопрос</h2>
         <div class="question-form__contacts">
-          <label class="question-form__label" for="name">Фамилия Имя Отчество</label>
-          <input class="question-form__input" type="text" name="name">
-          <label class="question-form__label" for="tel">Номер телефона</label>
-          <input class="question-form__input" type="tel" name="tel">
-          <label class="question-form__label" for="adress">Адрес электронной почты</label>
-          <input class="question-form__input" type="text" name="adress">
+          <label class="question-form__label" for="question-form-name">Фамилия Имя Отчество</label>
+          <input class="question-form__input" id="question-form-name" type="text" name="name" required>
+          <label class="question-form__label" for="question-form-tel">Номер телефона</label>
+          <input class="question-form__input" id="question-form-tel" type="tel" name="tel" required>
+          <label class="question-form__label" for="question-form-email">Адрес электронной почты</label>
+          <input class="question-form__input" id="question-form-email" type="email" name="adress" required>
         </div>
         <div class="question-form__question">
-          <label class="question-form__label" for="question">Ваш вопрос</label>
-          <textarea class="question-form__textarea"></textarea>
+          <label class="question-form__label" for="question-form-question">Ваш вопрос</label>
+          <textarea class="question-form__textarea" id="question-form-question" required></textarea>
           <input class="question-form__submit" type="submit" name="submit">
         </div>
-      </form>
+      </form> <!-- /.question-form -->
 
     </div> <!-- /.container -->
 
 
     <!-- Map 
     ========================-->
-    <div class="map">
-      <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d617.7169108452533!2d23.831014766137592!3d53.68650501110164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dfd6213de474eb%3A0xe08064bc34c7aa99!2sGrodno+Branch+of+Hi-Tech+Park+of+Belarus!5e0!3m2!1sru!2sby!4v1561656107595!5m2!1sru!2sby" frameborder="0" allowfullscreen></iframe>
-    </div>
+    <section class="map">
+      <iframe id="iframe-map" class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2809.6463419215856!2d23.828142787726048!3d53.689370306842385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dfd620768e91cf%3A0xd91b5c46d78b4768!2z0J_RgNC-0YTQtdGB0YHQvtGA0YHQutC40Lkg0LrQvtC90YHRg9C70YzRgtCw0YLQuNCy0L3Ri9C5INGG0LXQvdGC0YA!5e0!3m2!1sru!2sby!4v1563285312631!5m2!1sru!2sby" frameborder="0" allowfullscreen></iframe>
+      <div class="container">
+        <div class="map__select-sity-box">
+          <div class="map__wrapper">
+            <h4 class="map__title">Город: </h4>
+            <select id="map-select" class="map__select" name="sity">
+              <option class="map__option" value="grodno">Гродно</option>
+              <option class="map__option" value="minsk">Минск</option>
+              <option class="map__option" value="brest">Брест</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section> <!-- /.map -->
 
   </main> <!-- /.main -->
 
@@ -276,19 +328,20 @@
             </a>
           </div>
         <form class="footer__form" action="">
-          <h3 class="footer__title">Задать вопрос</h3>
+          <h3 class="footer__title footer__title_lg">Задать вопрос</h3>
           <div class="footer__contacts">
-            <label class="footer__label" for="name">Фамилия Имя Отчество:</label>
-            <input class="footer__input" type="text" name="name" required="true">
-            <label class="footer__label" for="tel">Контактный номер телефона:</label>
-            <input class="footer__input" type="tel" name="tel" required="true">
-            <label class="footer__label" for="email">Адрес электронной почты:</label>
-            <input class="footer__input" type="email" name="email" required="true">
-            <input class="footer__input footer__input_submit" type="submit" name="submit">
+            <label class="footer__label" for="foot-form-name">Фамилия Имя Отчество:</label>
+            <input class="footer__input" id="foot-form-name" type="text" name="name"  placeholder="Сергеев Сергей Сергеевич" required>
+            <label class="footer__label" for="foot-form-tel">Контактный номер телефона:</label>
+            <input class="footer__input" id="foot-form-tel" type="tel" name="tel" required placeholder="+375333214412">
+            <label class="footer__label" for="foot-form-email">Адрес электронной почты:</label>
+            <input class="footer__input" id="foot-form-email" type="email" name="email" required placeholder="grodnoclinic@mail.ru">
+            <input class="footer__input footer__input_submit" type="submit" name="submit" value="Отправить">
           </div>
           <div class="footer__question">
-            <label class="footer__label" for="email">Ваш вопрос:</label>
-            <textarea class="footer__input footer__input_textarea" name="question" required="true"></textarea>
+            <h3 class="footer__title footer__title_xs">Задать вопрос</h3>
+            <label class="footer__label" for="foot-form-question">Ваш вопрос:</label>
+            <textarea class="footer__input footer__input_textarea" id="foot-form-question" name="question" required placeholder="Ваш вопрос"></textarea>
           </div>
         </form>
         <div class="footer__info">© 2019 ООО "Гродно Клиник"</div>
@@ -296,5 +349,14 @@
       </div>
     </div> <!-- /.container -->
   </footer><!-- /.footer -->
+
+
+  <!-- Script 
+  ========================-->
+  <script src="js/hiding-header.js"></script>
+  <script src="js/header-search.js"></script>
+  <script src="js/burger-menu.js"></script>
+  <script src="js/hiding-center-cards.js"></script>
+  <script src="js/select-map.js"></script>
 </body>
 </html>

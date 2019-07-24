@@ -3,10 +3,6 @@
 
 /*Carousel
 ====================*/
-.carousel {
-  // z-index: -2;
-}
-
 .carousel-indicators li {
   background-color: #eee;
   border: none;
@@ -190,7 +186,7 @@
 /*Services
 ====================*/
 .services__grid {
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 15px;
   margin: 10px 0 30px;
 }
@@ -208,6 +204,8 @@
 /*Staff
 ====================*/
 .staff__grid {
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
   margin: 0px 0px 30px;
 }
 
@@ -300,26 +298,146 @@
 }
 
 
+/* Advantage
+====================*/
+.advantage {
+  margin: 50px 0;
+}
+
+.advantage__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
+
+.advantage__item {
+  position: relative;
+  grid-column: span 1;
+  width: 100%;
+  height: 150px;
+  perspective: 2000px;
+}
+
+.advantage__item_big {
+  grid-row: span 2;
+  height: 100%;
+}
+
+.advantage__item:hover .advantage__side_front {
+  transform: rotateY(-180deg);
+}
+
+.advantage__item:hover .advantage__side_back {
+  transform: rotateY(-360deg);
+}
+
+.advantage__side {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.7s;
+  background-position: center;
+  background-size: cover;
+}
+
+.advantage__side_front {
+  background-color: @color1;
+}
+
+.advantage__side_back {
+  background-color: @color1;
+  transform: rotateY(-180deg);
+}
+
+.advantage__title,
+.advantage__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  backface-visibility: hidden;
+  transform: translateX(-50%) translateY(-50%) translateZ(60px);
+  color: #eee;
+}
+
+.advantage__title {
+  font-size: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.advantage__text {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+
 /* Map
 ====================*/
 .map {
+  position: relative;
   width: 100%;
   height: 500px;
 }
 
 .map__iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
 
+.map__select-sity-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.map__wrapper {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  padding: 10px;
+  background: linear-gradient(to top, @color1 20%, @color1_l);
+  color: #fff;
+  font-weight: 300;
+}
+
+.map__title {
+  display: inline-block;
+}
+
+.map__select {
+  font-size: 23px;
+  border: none;
+  background-color: transparent;
+  color:  #fff;
+}
+
+.map__option {
+  background-color: @color1;
+  font-weight: 300;
+}
+
+
 
 @media (max-width: 1130px) {
   .staff__grid {
-    grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .services__grid {
-    grid-template-columns: repeat(auto-fit, minmax(357px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -337,11 +455,40 @@
   .reservation__input_submit-sm {
     display: inline-block;
     padding: 3px 20px;
+  }
 
+  .advantage__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
+  /* Advantage
+  ====================*/
+  .advantage__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .advantage__item_big {
+    grid-row: span 1;
+    height: 150px;
+  }
+
+  /* Carousel
+  ====================*/
+  .carousel__text {
+    display: none;
+  }
+
+  .carousel__title {
+    font-size: 40px;
+  }
+
+  .carousel__img {
+    background-position: right;
+  }
+
+
   /* Call-box
   ====================*/
   .reservation {
@@ -351,22 +498,15 @@
   .reservation__wrapper {
     flex-direction: column;
     border-radius: 0px;
-    background-color: none;
   }
 
   .reservation__input {
     margin: 10px 0;
+    padding-left: 10px;
     background-color: #fff;
     border-radius: 50px;
 
   }
-
-
-
-
-
-
-
 
 
   /* Call-box
@@ -374,6 +514,7 @@
   .call-box {
     flex-direction: column;
     height: auto;
+    padding: 30px 0;
   }
   .call-box__icon {
     margin: 0;
@@ -383,5 +524,15 @@
     padding-bottom: 20px;
     border-right: none;
     border-bottom: 1px solid @color2;
+  }
+}
+
+@media (max-width: 550px) {
+   .staff__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services__grid {
+    grid-template-columns: 1fr;
   }
 }

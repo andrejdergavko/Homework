@@ -3,7 +3,6 @@
 /*Footer
 ====================*/
 .footer {
-  // background-color: @color1;
   background: url(../img/bg-footer.jpg);
   background-size: cover;
   background-position: center;
@@ -75,6 +74,10 @@
   border: 2px solid #fff;
 }
 
+.footer__input::placeholder {
+  color: #ccc;
+}
+
 .footer__input_textarea {
   height: 179px;
 }
@@ -107,4 +110,47 @@
   font-size: 24px;
   font-weight: 300;
   margin-bottom: 20px;
+}
+
+.footer__title_xs {
+  display: none;
+}
+
+
+@media (max-width: 938px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "tel email"
+    "social-title social"
+    "form form"
+    "form form"
+    "form form"
+    "info signature";
+  }
+
+  .footer__about {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+
+  
+
+  .footer__form {
+    flex-direction: column-reverse;
+  }
+
+  .footer__question {
+    margin: 0;
+  }
+
+  .footer__title_lg {
+    display: none;
+  }
+
+  .footer__title_xs {
+    display: block;
+  }
 }

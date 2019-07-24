@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>Персонал</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <!-- Bootstrap -->
   <link href="libs/bootstrap/css/bootstrap.css" rel="stylesheet">
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -14,6 +16,7 @@
   <link rel="stylesheet" type="text/css" href="css/fonts.css">
   <link rel="stylesheet" type="text/css" href="css/common.css">
   <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/intro.css">
   <link rel="stylesheet" type="text/css" href="css/staff.css">
   <link rel="stylesheet" type="text/css" href="css/footer.css">
 </head>
@@ -22,7 +25,7 @@
 
   <!-- Header 
   ========================-->
-  <div class="header">
+  <header id="header" class="header">
     <div class="header__info-box">
       <div class="container">
         <div class="header__wrapper">
@@ -52,19 +55,34 @@
               <img class="tool-box__icon" src="img/icon/telegram1.png" alt="telegram">
               <img class="tool-box__icon tool-box__icon_hover" src="img/icon/telegram2.png" alt="telegram">
             </a>
-            <button class="tool-box__search">
+            <button id="btn-search-open" class="tool-box__search">
               <img class="tool-box__icon" src="img/icon/search1.png" alt="search">
               <img class="tool-box__icon tool-box__icon_hover" src="img/icon/search2.png" alt="search">
             </button>
           </div>
         </div>
       </div>
-    </div> <!-- /.info-box -->
+
+      <div id="search-box" class="search-box header__search-box">
+        <div class="container">
+          <div class="search__wrapper">
+            <img class="search-box__icon" src="img/icon/search-box.png" alt="Поиск">
+            <form class="search-box__form" action="">
+              <input id="search-input" class="search-box__intut" type="search" name="search" placeholder="например: геникология">
+            </form>
+            <button id="btn-search-close" class="search-box__button">
+              <img class="search-box__icon" src="img/icon/exit.png" alt="Закрыть">
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- /.header__info-box -->
 
     <div class="container">
       <div class="header__wrapper">
         <a class="header__logo" href="index.html">Grodno clinic <span class="header__plus">+</span></a>
-        <div class="nav header_nav">
+        <nav class="nav header__nav">
           <ul class="nav__list">
             <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
             <li class="nav__item"><a class="nav__link" href="about.html">О клинике</a></li>
@@ -72,10 +90,27 @@
             <li class="nav__item"><a class="nav__link nav__link_active" href="staff.html">Врачи</a></li>
             <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
           </ul>
-        </div> <!-- /.nav -->
+        </nav> <!-- /.nav -->
+
+        <div class="burger-menu header__burger-menu">
+          <button id="burger-button" class="burger-menu__button">
+            <span class="burger-menu__lines"></span>
+          </button>
+          <div id="burger-slider" class="burger-menu__slider">
+            <nav class="nav burger-menu__nav">
+              <ul class="nav__list nav__list_mobile">
+                <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="about.html">О клинике</a></li>
+                <li class="nav__item"><a class="nav__link" href="services.html">Услуги и цены</a></li>
+                <li class="nav__item"><a class="nav__link nav__link_active" href="staff.html">Врачи</a></li>
+                <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
+              </ul>
+            </nav>
+          </div> <!-- /.burger-menu__slider -->
+        </div> <!-- /.burger-menu -->
       </div>
     </div> <!-- /.container -->
-  </div> <!-- /.header -->
+  </header> <!-- /.header -->
 
 
   <!-- Main
@@ -85,14 +120,14 @@
 
     <!-- Intro 
     ========================-->
-    <div class="intro">
+    <section class="intro">
       <div class="container">
         <div class="intro__inner">
           <h2 class="intro__title">Наш персонал- наша гордость</h2>
           <p class="intro__text">Каждый специалист нашей Клиники отвечает за определенную область медицины, что позволяет клиенту целенаправленно попасть к врачу соответствующей специализации и квалификации.</p>
         </div>
       </div>
-    </div> <!-- /.intro -->
+    </section> <!-- /.intro -->
 
 
     <!-- Breadcrumbs 
@@ -108,7 +143,7 @@
     <!-- Staff
     ========================-->
     <div class="container">
-      <div class="staff">
+      <section class="staff">
 
         <div class="staff__title section-title">
           <a href="staff.html">Врачи</a>
@@ -241,7 +276,7 @@
         
         <button class="staff__btn button">Показать еще</button>
         
-      </div> <!-- /.staff -->
+      </section> <!-- /.staff -->
     </div> <!-- /.container -->
   </main> <!-- /.main -->
 
@@ -286,19 +321,20 @@
             </a>
           </div>
         <form class="footer__form" action="">
-          <h3 class="footer__title">Задать вопрос</h3>
+          <h3 class="footer__title footer__title_lg">Задать вопрос</h3>
           <div class="footer__contacts">
-            <label class="footer__label" for="name">Фамилия Имя Отчество:</label>
-            <input class="footer__input" type="text" name="name" required="true">
-            <label class="footer__label" for="tel">Контактный номер телефона:</label>
-            <input class="footer__input" type="tel" name="tel" required="true">
-            <label class="footer__label" for="email">Адрес электронной почты:</label>
-            <input class="footer__input" type="email" name="email" required="true">
-            <input class="footer__input footer__input_submit" type="submit" name="submit">
+            <label class="footer__label" for="foot-form-name">Фамилия Имя Отчество:</label>
+            <input class="footer__input" id="foot-form-name" type="text" name="name"  placeholder="Сергеев Сергей Сергеевич" required>
+            <label class="footer__label" for="foot-form-tel">Контактный номер телефона:</label>
+            <input class="footer__input" id="foot-form-tel" type="tel" name="tel" required placeholder="+375333214412">
+            <label class="footer__label" for="foot-form-email">Адрес электронной почты:</label>
+            <input class="footer__input" id="foot-form-email" type="email" name="email" required placeholder="grodnoclinic@mail.ru">
+            <input class="footer__input footer__input_submit" type="submit" name="submit" value="Отправить">
           </div>
           <div class="footer__question">
-            <label class="footer__label" for="email">Ваш вопрос:</label>
-            <textarea class="footer__input footer__input_textarea" name="question" required="true"></textarea>
+            <h3 class="footer__title footer__title_xs">Задать вопрос</h3>
+            <label class="footer__label" for="foot-form-question">Ваш вопрос:</label>
+            <textarea class="footer__input footer__input_textarea" id="foot-form-question" name="question" required placeholder="Ваш вопрос"></textarea>
           </div>
         </form>
         <div class="footer__info">© 2019 ООО "Гродно Клиник"</div>
@@ -306,5 +342,12 @@
       </div>
     </div> <!-- /.container -->
   </footer><!-- /.footer -->
+
+
+  <!-- Script 
+  ========================-->
+  <script src="js/hiding-header.js"></script>
+  <script src="js/header-search.js"></script>
+  <script src="js/burger-menu.js"></script>
 </body>
 </html>
